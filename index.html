@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanilla App Template</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  
+  <script type="module" crossorigin src="/vanilla-app-template/commonHelpers2.js"></script>
+  <link rel="stylesheet" href="/vanilla-app-template/assets/index-b11516fb.css">
+</head>
+
+<body>
+  <header class="header">
+  <div class="container">
+    <nav class="nav">
+      <!-- Navigation -->
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="./favorites.html" class="nav-link">Favorites</a>
+        </li>
+      </ul>
+      <!-- Logo -->
+      <a href="./index.html" class="header-logo"></a>
+
+      <!-- Shopping cart icon -->
+      <a href="" class="header-cart-icon">
+        <svg>
+          <use></use>
+        </svg>
+      </a>
+
+      <!-- Theme switch -->
+      <a href="" class="header-theme-icon">
+        <svg>
+          <use></use>
+        </svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="section hero">
+      <div class="container">
+        <h1 class="hero-header">Learn to Cook <span class="hero-header-accent">Tasty Treats'</span> Customizable
+          Masterclass</h1>
+        <p class="hero-text">TastyTreats - Customize Your Meal with Ingredient Options and Step-by-Step Video Guides.
+        </p>
+        <button class="hero-order">Order now</button>
+      </div>
+
+      <!-- Slider with the help of Swiper -->
+      <div class="hero-slider">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section recipes">
+      <div clas="container">
+        <!-- Container for left panel -->
+        <div class="recipes-cat-fav">
+          <!-- Categories selector -->
+          <div class="recipes-categories">
+            <button class="btn-primary btn-allcat">All categories</button>
+            <ul class="recipes-cat-container">
+              <li>Beef</li>
+              <li>Breakfast</li>
+              <li>Chicke</li>
+              <li>Dessert</li>
+            </ul>
+          </div>
+          <!-- Popular recipes -->
+          <div class="recipes-popular">
+            <ul class="recipes-pop-container">
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="recipes-main">
+          <div class="recipes-filters"></div>
+          <div class="recipes-content"></div>
+        </div>
+
+
+      </div>
+    </section>
+
+  </main>
+
+  
+</body>
+
+</html>
