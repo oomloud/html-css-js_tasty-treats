@@ -5,13 +5,20 @@
   |============================
 */
 @import url('./reset.css');
+@import url('./header.css');
 
 :root {
   /* Colors */
-  --colorTextMain: rgb(5, 5, 5);
+  --colorTextMain: #050505;
   --colorTextGrey: rgba(5, 5, 5, 0.5);
   --colorAccent: rgb(155, 181, 55);
   --colorBodyBckg: #f8f8f8;
+  --colorTextInverted: #f8f8f8;
+  --colorTextSlidesHeader: rgba(248, 248, 248, 0.6);
+  --colorTextslidesText: rgba(248, 248, 248, 0.2);
+
+  /* transitions */
+  --standardTransition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -49,4 +56,140 @@ p {
 
 .list {
   list-style: none;
+}
+
+.container {
+  padding: 28px 20px;
+}
+
+.text-accent {
+  color: var(--colorAccent);
+  font-variation-settings: 'slnt';
+}
+
+.btn-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--colorAccent);
+  border-radius: 12px;
+  background: none;
+  padding: 10px 20px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21em;
+}
+
+.btn-main:hover,
+.btn-main:focus {
+  background: var(--colorAccent);
+  color: var(--colorTextInverted);
+}
+
+/* ****************************************************** */
+/* Hero */
+/* ****************************************************** */
+
+.hero-header {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.2em; /* or 31px */
+  text-transform: uppercase;
+  color: var(--colorTextMain);
+  margin-bottom: 14px;
+}
+
+.hero-header-accent {
+  color: var(--colorAccent);
+  font-style: oblique;
+}
+
+.hero-text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29em;
+  color: var(--colorTextMain);
+  margin-bottom: 28px;
+}
+
+.hero-slider {
+  margin-top: 48px;
+}
+
+.swiper {
+  width: 496px;
+  height: 302px;
+}
+
+.swiper-slide-content {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+  position: relative;
+}
+
+.slide-img-1 {
+  width: 80px;
+  height: 280px;
+  border-radius: 15px;
+}
+
+.slide-img-2 {
+  width: 200px;
+  height: 280px;
+
+  background: var(--colorTextMain);
+  border: 1px solid rgba(155, 181, 55, 0.3);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 14px;
+}
+
+.slide-img-3 {
+  width: 185px;
+  height: 280px;
+  border-radius: 15px;
+  background-image: url(../img/01_hero/slider_01_3_mobile.jpg);
+}
+
+.swiper-slide-image {
+  width: 157px;
+  height: 142px;
+}
+
+.swiper-slide-header {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.4em; /* or 140% */
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--colorTextSlidesHeader);
+  margin: 20px 0 4px;
+}
+
+.swiper-slide-text {
+  /* Italian */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.5em;
+  text-align: center;
+
+  color: var(--colorTextslidesText);
 }

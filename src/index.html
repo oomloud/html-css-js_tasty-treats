@@ -9,11 +9,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-4,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
+  <!-- prettier-ignore-attribute -->
   <load="partials/header.html" />
 
   <main>
@@ -23,36 +25,75 @@
           Masterclass</h1>
         <p class="hero-text">TastyTreats - Customize Your Meal with Ingredient Options and Step-by-Step Video Guides.
         </p>
-        <button class="hero-order">Order now</button>
-      </div>
+        <button class="btn-main btn-hero-order">Order now</button>
 
-      <!-- Slider with the help of Swiper -->
-      <div class="hero-slider">
-        <!-- Slider main container -->
-        <div class="swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            ...
+        <!-- Slider with the help of Swiper -->
+        <div class="hero-slider">
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <ul class="swiper-slide-content">
+                  <li class="slide-img-1">
+                    <img src="./img/01_hero/slider_01_1_mobile.png" alt="">
+                  </li>
+                  <li class="slide-img-2">
+                    <img class="swiper-slide-image" src="./img/01_hero/slider_01_2_mobile.png" alt="">
+                    <h3 class="swiper-slide-header">Grilled, smoky, delicious barbecue</h3>
+                    <p class="swiper-slide-text">Spanish</p>
+                  </li>
+                  <li class="slide-img-3">
+                    <!-- <img src="./img/01_hero/slider_01_3_mobile.jpg" alt=""> -->
+                  </li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="swiper-slide-content">
+                  <li class="slide-img-1">
+                    <img src="./img/01_hero/slider_01_1_mobile.png" alt="">
+                  </li>
+                  <li class="slide-img-2">
+                    <img src="./img/01_hero/slider_01_2_mobile.png" alt="">
+                    <h3 class="swiper-slide-header">Grilled, smoky, delicious barbecue</h3>
+                    <p class="swiper-slide-text">Spanish</p>
+                  </li>
+                  <li class="slide-img-3">
+                    <!-- <img src="./img/01_hero/slider_01_3_mobile.jpg" alt=""> -->
+                  </li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <ul class="swiper-slide-content">
+                  <li class="slide-img-1">
+                    <img src="./img/01_hero/slider_01_1_mobile.png" alt="">
+                  </li>
+                  <li class="slide-img-2">
+                    <img src="./img/01_hero/slider_01_2_mobile.png" alt="">
+                    <h3 class="swiper-slide-header">Grilled, smoky, delicious barbecue</h3>
+                    <p class="swiper-slide-text">Spanish</p>
+                  </li>
+                  <li class="slide-img-3">
+                    <!-- <img src="./img/01_hero/slider_01_3_mobile.jpg" alt=""> -->
+                  </li>
+                </ul>
+              </div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-
-          <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar"></div>
         </div>
       </div>
+
+
     </section>
 
     <section class="section recipes">
-      <div clas="container">
+      <div class="container">
         <!-- Container for left panel -->
         <div class="recipes-cat-fav">
           <!-- Categories selector -->
@@ -74,8 +115,57 @@
         </div>
 
         <div class="recipes-main">
-          <div class="recipes-filters"></div>
-          <div class="recipes-content"></div>
+          <div class="recipes-filters">
+            <!-- Filter form -->
+            <form class="recipes-form js-search-form">
+              <label for="search">Search</label>
+              <input type="text" name="search" id="search">
+              <label for="time">Time</label>
+              <select name="time" id="time">
+                <option value="40min">40 min</option>
+                <option value="30min">30 min</option>
+                <option value="20min">20 min</option>
+                <option value="10min">10 min</option>
+              </select>
+              <label for="area">Area</label>
+              <select name="area" id="area">
+                <option value="italian">Italian</option>
+                <option value="english">English</option>
+                <option value="french">French</option>
+                <option value="moladavian">Moldavian</option>
+              </select>
+              <label for="ingredients">Ingredients</label>
+              <select name="ingredients" id="ingredients">
+                <option value="tomato">Tomato</option>
+                <option value="potato">Potato</option>
+                <option value="rainbow-dust">Rainbow dust</option>
+                <option value="peaches">Peaches</option>
+              </select>
+              <!-- reset form -->
+              <button type="reset" class="recipes-form-reset">
+                <svg class="reset-icon" height="16" width="16">
+                  <use></use>
+                </svg>
+                Reset the filter
+
+              </button>
+            </form>
+
+          </div>
+          <div class="recipes-content">
+            <div class="rcp-card">
+              <div class="rcp-favorite"></div>
+              <div class="rcp-content">
+                <h3>Banana pancakes</h3>
+                <p>Banana pancakes are a fluffy and sweet breakfast dish made with mashed ripe bananas, eggs, flour, and
+                  a touch of cinnamon, cooked to perfection on a skillet and served with toppings of your choice.</p>
+                <div class="rcp-rating">
+                  <div class="rcp-rating-value">4.5</div>
+                </div>
+                <button class="rcp-open">See recipe</button>
+              </div>
+            </div>
+          </div>
         </div>
 
 
@@ -85,6 +175,17 @@
   </main>
 
   <script type="module" src="./main.js"></script>
+  <script>
+    document
+      .querySelector(".js-search-form")
+      .addEventListener('submit', e => {
+        e.preventDefault();
+        new FormData(e.currentTarget).forEach((value, name) =>
+          // console.dir(value),
+          console.log(`${name}: ${value}`),
+        );
+      })
+  </script>
 </body>
 
 </html>

@@ -1,9 +1,9 @@
 <header class="header">
   <div class="container">
-    <nav class="nav">
+    <nav class="header-nav">
       <!-- Navigation -->
-      <ul class="nav-list">
-        <li class="nav-item">
+      <ul class="header-nav-menu">
+        <li class="nav-item active">
           <a href="./index.html" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
@@ -11,21 +11,29 @@
         </li>
       </ul>
       <!-- Logo -->
-      <a href="./index.html" class="header-logo"></a>
+      <a href="./index.html" class="header-logo"><span class="text-accent">tasty</span>treats</a>
 
-      <!-- Shopping cart icon -->
-      <a href="" class="header-cart-icon">
-        <svg>
-          <use></use>
+      <!-- Shopping cart button -->
+      <button class="btn-header-icon btn-header-cart">
+        <svg class="icon-cart" width="32" height="32">
+          <use href="../img/icons/icons.svg#shopping-cart"></use>
         </svg>
-      </a>
-
+      </b>
+      <!-- Mobile menu hamburger button -->
+      <button class="btn-header-icon btn-header-menu js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="icon-menu" width="32" height="32" aria-label="Mobile menu toggle button">
+          <use href="../img/icons/icons.svg#menu-burger"></use>
+        </svg>
+      </button>
       <!-- Theme switch -->
-      <a href="" class="header-theme-icon">
-        <svg>
+      <button class="btn-header-icon btn-theme">
+        <svg  width="32" height="32">
           <use></use>
         </svg>
-      </a>
+      </button>
+
+
+
     </nav>
   </div>
 </header>
